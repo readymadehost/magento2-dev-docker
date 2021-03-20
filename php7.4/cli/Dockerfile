@@ -4,42 +4,48 @@ LABEL maintainer="ReadyMadeHost http://readymadehost.com"
 
 # Installing required packages
 RUN apt-get update && apt-get upgrade -y
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
 	apt-transport-https \
 	libicu-dev \
-    libonig-dev \
-    libzip-dev \
-    libcurl4-openssl-dev \
-    pkg-config \
-    libssl-dev \
-    git \
-    vim \
-    zip \
-    unzip \
-    wget \
-    screenfetch \
-    mariadb-client
-RUN apt-get install -y libmcrypt-dev libxml2-dev libxslt-dev libbz2-dev
-RUN apt-get install -y libfreetype6-dev libjpeg-dev libpng-dev
-RUN apt-get install -y openssl gnupg2
+  libonig-dev \
+  libzip-dev \
+  libcurl4-openssl-dev \
+  pkg-config \
+  libssl-dev  \
+  libmcrypt-dev \
+  libxml2-dev \
+  libxslt-dev \
+  libbz2-dev \
+  libfreetype6-dev \
+  libjpeg-dev \
+  libpng-dev \
+  openssl \
+  gnupg2 \
+  git \
+  vim \
+  zip \
+  unzip \
+  wget \
+  screenfetch \
+  mariadb-client
 
-RUN docker-php-ext-configure gd --with-freetype --with-jpeg
+RUN docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg
 
 # Installing extensions
-RUN docker-php-ext-install bcmath
-RUN docker-php-ext-install ctype
-RUN docker-php-ext-install curl
-RUN docker-php-ext-install dom
-RUN docker-php-ext-install gd
-RUN docker-php-ext-install iconv
-RUN docker-php-ext-install intl
-RUN docker-php-ext-install mbstring
-RUN docker-php-ext-install pdo_mysql
-RUN docker-php-ext-install simplexml
-RUN docker-php-ext-install soap
-RUN docker-php-ext-install xsl
-RUN docker-php-ext-install zip
-RUN docker-php-ext-install sockets
+RUN docker-php-ext-install bcmath \
+  ctype \
+  curl \
+  dom \
+  iconv \
+  intl \
+  mbstring \
+  pdo_mysql \
+  simplexml \
+  soap \
+  xsl \
+  zip \
+  sockets \
+  gd
 
 # Installing other extensions but enabled dynamically
 RUN pecl install redis
