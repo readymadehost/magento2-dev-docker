@@ -15,7 +15,7 @@ A development docker for every magento2 project
 - Latest elasticsearch-7.9.x, elasticsearch-6.x, ... supported
 - Latest rabbitmq-3.8.x, ... supported
 - Latest varnish-6.4, varnish-6.0, ... supported
-- Included n98-magerun2, composer, node cli and yarn cli
+- Included n98-magerun2, composer, node cli, yarn cli and grunt cli
 - Included emailcatcher with smtp and web view
 - Support for PhpStorm or VSCode + WSL2/docker-desktop setup
 - Support for xdebug included check `.env` file
@@ -127,6 +127,12 @@ Mailcatcher service is included, can be accessed using URL and can be configured
 ```
 smtp://mailcatcher:1025
 ```
+
+
+## Sample project
+A magento2 sample project using magento2 dev docker + github actions for continuous integration.
+
+- https://github.com/readymadehost/magento2-dev-docker-sample
 
 
 ## Phpstorm setup
