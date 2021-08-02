@@ -82,6 +82,7 @@ bin/magento setup:install \
 - For more info and change, check `.env` and `docker-compose.yml`
 - Manage permission inside container using bash alias `mpp` or `/root/manage-project-permission.sh`
 - Mariadb default:- host: `mariadb` user: `root`, password: `root`, database: `project`
+- RabbitMQ default:- host: `rabbitmq` user: `root`, password: `root`
 
 ```text
 - <docker_root_dir> <-- docker root dir
