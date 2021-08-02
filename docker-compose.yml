@@ -98,6 +98,11 @@ services:
 
   rabbitmq:
     image: rabbitmq:${RABBITMQ_VERSION}
+    environment:
+      - RABBITMQ_DEFAULT_USER=root
+      - RABBITMQ_DEFAULT_PASS=root
+    volumes:
+      - './data/rabbitmq:/var/lib/rabbitmq'
 
   mailcatcher:
     image: sj26/mailcatcher
