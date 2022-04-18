@@ -1,4 +1,4 @@
-FROM php:7.4-cli
+FROM php:7.1-cli
 
 LABEL maintainer="ReadyMadeHost http://readymadehost.com"
 
@@ -58,9 +58,6 @@ RUN IPE_DONT_ENABLE=1 install-php-extensions redis \
 
 # Updating php.ini
 ADD conf/php.ini /usr/local/etc/php/php.ini
-
-# Installing n98-magerun2
-RUN curl -O https://files.magerun.net/n98-magerun2.phar && chmod +x ./n98-magerun2.phar && mv ./n98-magerun2.phar /usr/local/bin/
 
 # Manage project and add scripts
 RUN mkdir -p /var/www/project

@@ -7,8 +7,7 @@ A development docker for every magento2 project
 
 - Build for magento2 projects
 - Bundle of `fpm`, `cli`, `nginx`, `mariadb`, `phpmyadmin`, `redis` , `elasticsearch`, `rabbitmq`, `emailcatcher` and `varnish` containers
-- Latest PHP versions
-  - php7.4 (for Magento2.4.x - default)
+- PHP 7.1, 7.2, 7.3, 7.4, 8.0 and 8.1 supported
 - Latest database mariadb10.4, mariadb10.2 and other versions supported
 - Latest node14.x, node13.x, node12.x, ... supported
 - Latest redis-6.x, redis-5.x, ... supported
