@@ -1,10 +1,9 @@
 name: Docker Release
 
 on:
-  schedule:
-    - cron: '30 22 * * *'
   push:
-    branches: [ main ]
+    tags:
+      - '*'
 
 jobs:
   build:
