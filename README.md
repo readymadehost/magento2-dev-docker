@@ -145,10 +145,19 @@ Simply add remote docker-compose php cli interpreter (exec with docker-compose.y
 With vscode's remote container extension, we can simply connect into cli container.
 
 
-## For development usages
+## Pre build docker image
 
-- Clone this repo and pull on update. ReadyMadeHost cli tool coming soon...
+- `readymadehost/magento2-dev-docker-php{PHP_VERSION}-cli`
+- `readymadehost/magento2-dev-docker-php{PHP_VERSION}-fpm`
 
-## For production usages
 
-- Current docker setup is for development only. Planning for ReadyMadeHost coming soon...
+## Quick Link
+
+* Easy installation of PHP extensions in official PHP Docker images
+    - https://github.com/mlocati/docker-php-extension-installer
+
+* MailCatcher
+    - https://github.com/sj26/mailcatcher
+
+* ReadyMadeHost docker hub
+    - https://hub.docker.com/orgs/readymadehost
