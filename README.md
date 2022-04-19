@@ -8,12 +8,12 @@ A development docker for every magento2 project
 - Build for magento2 projects
 - Bundle of `fpm`, `cli`, `nginx`, `mariadb`, `phpmyadmin`, `redis` , `elasticsearch`, `rabbitmq`, `emailcatcher` and `varnish` containers
 - PHP 7.1, 7.2, 7.3, 7.4, 8.0 and 8.1 supported
-- Latest database mariadb10.4, mariadb10.2 and other versions supported
-- Latest node14.x, node13.x, node12.x, ... supported
-- Latest redis-6.x, redis-5.x, ... supported
-- Latest elasticsearch-7.9.x, elasticsearch-6.x, ... supported
-- Latest rabbitmq-3.8.x, ... supported
-- Latest varnish-6.4, varnish-6.0, ... supported
+- Database mariadb 10.1, 10.2, 10.3, 10.4, ... supported
+- Node 14.x, 16.x, 17.x, ... supported
+- Redis 5.x, 6.x, 6.2, ... supported
+- Elasticsearch 5.x, 6.x, 7.x, ... supported
+- Rabbitmq 2.x, 3.x, 3.9, ... supported
+- Varnish 4.x, 5.x, 6.x, 7.x, ... supported
 - Included n98-magerun2, composer, node cli, yarn cli and grunt cli
 - Included emailcatcher with smtp and web view
 - Support for PhpStorm or VSCode + WSL2/docker-desktop setup

@@ -1,12 +1,14 @@
 version: '3'
 
 services:
-  # varnish:
-  #   image: varnish:${VARNISH_VERSION}
-  #   ports:
-  #     - ${VARNISH_PORT}:80
-  #   links:
-  #     - nginx
+  varnish:
+    image: varnish:${VARNISH_VERSION}
+    ports:
+      - ${VARNISH_PORT}:80
+    volumes:
+      - ./varnish/default.vcl:/etc/varnish/default.vcl
+    depends_on:
+      - nginx
 
   nginx:
     image: nginx:alpine
@@ -26,7 +28,7 @@ services:
     #   args:
     #     PHP_ENABLE_REDIS: ${PHP_ENABLE_REDIS}
     #     PHP_ENABLE_XDEBUG: ${PHP_ENABLE_XDEBUG}
-    image: readymadehost/magento2-dev-docker-php${PHP_VERSION}-fpm:latest
+    image: readymadehost/magento2-dev-docker-php${PHP_VERSION}-fpm:${DOCKER_TAG}
     environment:
         PHP_ENABLE_REDIS: ${PHP_ENABLE_REDIS}
         PHP_ENABLE_XDEBUG: ${PHP_ENABLE_XDEBUG}
@@ -39,7 +41,7 @@ services:
       - redis
       - elasticsearch
       - rabbitmq
-      - mailcatcher
+      # - mailcatcher
 
   cli:
     # build:
@@ -48,7 +50,7 @@ services:
     #     NODE_VERSION: ${NODE_VERSION}
     #     PHP_ENABLE_REDIS: ${PHP_ENABLE_REDIS}
     #     PHP_ENABLE_XDEBUG: ${PHP_ENABLE_XDEBUG}
-    image: readymadehost/magento2-dev-docker-php${PHP_VERSION}-cli:latest
+    image: readymadehost/magento2-dev-docker-php${PHP_VERSION}-cli:${DOCKER_TAG}
     environment:
         PHP_ENABLE_REDIS: ${PHP_ENABLE_REDIS}
         PHP_ENABLE_XDEBUG: ${PHP_ENABLE_XDEBUG}
@@ -60,7 +62,7 @@ services:
       - redis
       - elasticsearch
       - rabbitmq
-      - mailcatcher
+      # - mailcatcher
   
   mariadb:
     image: mariadb:${MARIADB_VERSION}
