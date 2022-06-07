@@ -49,6 +49,7 @@ RUN install-php-extensions \
 	gd \
 	imagick \
 	apcu \
+	amqp \
 	@composer
 
 # Installing other extensions but enabled dynamically
