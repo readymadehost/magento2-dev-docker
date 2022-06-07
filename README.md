@@ -37,9 +37,13 @@ A development docker for every magento2 project
 - Read https://devdocs.magento.com/guides/v2.4/install-gde/composer.html
 - `docker-compose exec cli bash` and make sure you are at `/var/www/project` dir
 - Setup new magento2 project using composer
-  - `composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition .`
-  - or `composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition .`
-  - or `composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition={version} .`
+
+`composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition .`
+
+or `composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition .`
+
+or `composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition={version} .`
+
 - Run bash alis `mpp` for `/root/manage-project-permission.sh`
 - Run `bin/magento` and should return list of commands
 - Magento2.4.x project install command https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli.html
