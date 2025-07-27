@@ -35,7 +35,7 @@ jobs:
         run: PHP_VERSION=7.4 docker compose -f docker-compose-publish.yml build && PHP_VERSION=7.4 docker compose -f docker-compose-publish.yml push
       - name: For php7.3
         run: PHP_VERSION=7.3 docker compose -f docker-compose-publish.yml build && PHP_VERSION=7.3 docker compose -f docker-compose-publish.yml push
-      - name: For php7.2
-        run: PHP_VERSION=7.2 docker compose -f docker-compose-publish.yml build && PHP_VERSION=7.2 docker compose -f docker-compose-publish.yml push
-      - name: For php7.1
-        run: PHP_VERSION=7.1 docker compose -f docker-compose-publish.yml build && PHP_VERSION=7.1 docker compose -f docker-compose-publish.yml push
+      # - name: For php7.2
+      #   run: PHP_VERSION=7.2 docker compose -f docker-compose-publish.yml build && PHP_VERSION=7.2 docker compose -f docker-compose-publish.yml push
+      # - name: For php7.1
+      #   run: PHP_VERSION=7.1 docker compose -f docker-compose-publish.yml build && PHP_VERSION=7.1 docker compose -f docker-compose-publish.yml push
