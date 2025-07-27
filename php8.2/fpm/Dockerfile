@@ -38,6 +38,7 @@ RUN install-php-extensions \
 	imagick \
 	apcu \
 	amqp \
+	ftp \
 	@composer
 
 # Installing other extensions but enabled dynamically

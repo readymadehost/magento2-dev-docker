@@ -47,9 +47,10 @@ RUN install-php-extensions \
 	sockets \
 	opcache \
 	gd \
-	# imagick \
+	imagick \
 	apcu \
 	amqp \
+	ftp \
 	@composer
 
 # Installing other extensions but enabled dynamically
