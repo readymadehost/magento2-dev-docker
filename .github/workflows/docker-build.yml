@@ -14,6 +14,8 @@ jobs:
         uses: actions/checkout@v3
       - name: Copy .env.sample to .env
         run: cp .env.sample .env
+      - name: For php8.4
+        run: PHP_VERSION=8.4 docker compose -f docker-compose-publish.yml build
       - name: For php8.3
         run: PHP_VERSION=8.3 docker compose -f docker-compose-publish.yml build
       - name: For php8.2
